@@ -23,8 +23,8 @@ let nav =
 `
 <ul>
 <li><a href="/">Home</a><li>
-<li><a href="/0">I Am</a><li>
-<li><a href="/1">Raise!</a><li>
+<li><a href="/albums/0">I Am</a><li>
+<li><a href="/albums/1">Raise!</a><li>
 </ul>
 `
 // Homepage
@@ -37,7 +37,7 @@ app.get('/', (req,res)=>{
 })
 
 // Band Music Page
-app.get('/:id', (req,res)=>{
+app.get('/albums/:id', (req,res)=>{
     let id = req.params.id;
     res.send(`
         ${nav}
